@@ -1,0 +1,30 @@
+body{
+
+}
+p{
+
+	width: 100px;
+}
+.fields{
+width: 100px;
+
+}
+#Shipping{
+
+display:block;
+background-color: lightblue;
+
+font-family:Verdana;
+
+}
+
+#Billing{  background-color: gray;  }
+
+
+#contact{background-color: yellow;}
+
+.rel {
+    float:left;
+    
+    width: 100px;
+    }
