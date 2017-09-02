@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+	<title>Assign 1 Question 1</title>
+</head>
+<body>
+<table id="table1">
+	<tr>
+		<th>Name</th>
+		<th>Phone Number</th>
+		<th>Fetch</th>
+		<th>Add/Remove</th>
+	</tr>
+	<tr>
+		<td><input type="text" id="1" name="NameTB"></td>
+		<td><input type="text" id="200" name="PhNoTB"></td>
+		<td><button class="fetch" onclick="fetchButton(this)">Fetch</button></td>
+		<td><button class="add" onclick="addField(this)"> + </button> <button class="remove" onclick="removeField(this)">-</button></td>
+
+	</tr>
+</table>
+<script>
+	function addField(n)
+	{
+		 var tr=n.parentNode.parentNode.cloneNode(true);
+         document.getElementById('table1').appendChild(tr);
+	}
+		
+	function removeField(n)
+	{
+			var tr2=n.parentNode.parentNode.rowIndex;
+			document.getElementById('table1').deleteRow(tr2);
+	}
+
+	function fetchButton(n)
+	{
+		var data=n.parentNode.parentNode.children;
+		var x=data[0].childNodes[0].value;
+		var y=data[1].childNodes[0].value;
+		window.alert("Name: " + x + "   Number" + y);
+
+	}
+
+</script>
+</body>
+</html>
